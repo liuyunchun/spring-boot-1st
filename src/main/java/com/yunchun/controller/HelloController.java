@@ -9,8 +9,8 @@ public class HelloController {
 
     @GetMapping("/hello")
     //@RequestMapping (value = "/hello", method = {RequestMethod.GET,RequestMethod.POST})
-    public String Hello(Model model,@RequestParam("name") String name) {
-        System.out.println(name);
+    public String hello(Model model,@RequestParam("name") String name) {
+        //System.out.println(name);
         model.addAttribute("name",name);
         return "Hello";
     }
